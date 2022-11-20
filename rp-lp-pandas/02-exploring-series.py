@@ -23,3 +23,19 @@ print(city_data)
 
 # You can get the axes like this
 print(city_data.axes)
+
+print(revenues[1])
+print(city_revenues["Toronto"])
+
+print(city_data.revenue)
+
+further_city_data = pd.DataFrame(
+    {
+        'revenue': [7000, 3400],
+        'employee_count': [2, 2]
+    },
+    index = ['New York', 'Barcelona']
+)
+
+all_city_data = pd.concat([city_data, further_city_data], sort=False)
+print(all_city_data)
